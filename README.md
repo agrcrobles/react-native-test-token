@@ -41,16 +41,11 @@ contract ZettaToken is EIP20Interface {
 ```
 ## Getting started in localhost
 
-1. JSON-RPC node can be running and configured in `truffle.js` with your local network IP ( replace `127.0.0.1` ).
+1. Configure JSON-RPC node in `truffle.js`, run `ifconfig` on linux or `ifconfig | grep inet` on osx and replace `development` entry ip with your local network IP.
 
 For more information about truffle see [ganache-cli](https://github.com/trufflesuite/ganache-cli)
 
-## Getting started in testnet ( ropsten )
-
-1. Checkout branch ropsten
-2. Run the app
-
-## Run the web server
+## Run the app
 
 ```bash
 # Install dependencies
