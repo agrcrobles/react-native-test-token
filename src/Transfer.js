@@ -84,14 +84,6 @@ export default class Transfer extends Component<Props, State> {
 					'Yeah, thanks for transfering, the transaction will be recorded on the blockchain. Please wait.',
 					[
 						{
-							text: 'Transaction',
-							onPress: () => {
-								Linking.openURL(
-									'https://ropsten.etherscan.io/address/${this.state.coinbase}'
-								);
-							},
-						},
-						{
 							text: 'OK',
 							onPress: () => {
 								console.log('ok!');

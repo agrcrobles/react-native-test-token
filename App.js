@@ -1,7 +1,7 @@
 /* @flow */
 import * as React from 'react';
 
-import { TabNavigator } from 'react-navigation';
+import { createMaterialTopTabNavigator } from 'react-navigation';
 
 import 'babel-preset-react-native-web3/globals';
 
@@ -21,7 +21,6 @@ const web3 = new Web3(web3Provider);
 
 class TransferScreen extends React.PureComponent<{}> {
 	static navigationOptions = {
-		tabBarVisible: false,
 	};
 	render() {
 		return <Transfer web3={web3} />;
@@ -29,7 +28,6 @@ class TransferScreen extends React.PureComponent<{}> {
 }
 class EventsScreen extends React.PureComponent<{}> {
 	static navigationOptions = {
-		tabBarVisible: false,
 	};
 	render() {
 		return <Events web3={web3} />;
@@ -37,14 +35,13 @@ class EventsScreen extends React.PureComponent<{}> {
 }
 class AccountListScreen extends React.PureComponent<{}> {
 	static navigationOptions = {
-		tabBarVisible: false,
 	};
 	render() {
 		return <AccountList web3={web3} />;
 	}
 }
 
-const AppNavigation = TabNavigator({
+const AppNavigation = createMaterialTopTabNavigator({
 	Events: { screen: EventsScreen },
 	Transfer: { screen: TransferScreen },
 	AccountList: { screen: AccountListScreen },
